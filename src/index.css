@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+*{
+    font-family: "Fredoka", sans-serif;
+}
+html{
+  scroll-behavior: smooth;
+}
+
+.custom-btn{
+  font-size: large;
+  color: white;
+  font-weight: bold;
+  background: #F3274C ;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+ 
+  position: relative;
+  width: fit-content;
+  display: inline-block;
+}
+.custom-btn ::before{
+  content: '';
+  position: absolute;
+  width: 90%;
+  height: 100%;
+  background: none;
+  outline: 3px solid #F3274C;
+  outline-offset: 5px;
+  top: 0;
+  left: 0px;
+  border-radius: 10px;
+  transition: all .2s ease-in;
+}
+.custom-btn:hover ::before{
+  width: 10%;
+}
+/* .custom-btn button{
+    position: relative;
+    z-index: 2;
+  }
+  
+  .custom-btn button:after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #F3274C;
+    transition: all .35s;
+    z-index: -3;
+  }
+  
+  .custom-btn button:hover:after{
+    width: 100%;
+  } */
+
+.heroTestimonial{
+  grid-template-columns: repeat(8,1fr);
+  grid-template-rows: repeat(8,70px);
+}
+.heroAboutLeft{
+  grid-template-columns: repeat(4,1fr);
+  grid-template-rows: repeat(7,70px);
+}
+.heroAboutRight{
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(8,58px);
+}
+
+/* @media screen and (min-width:768px) {
+  .story-container{
+    grid-template-columns: repeat(7,100vw);
+  }
+} */
